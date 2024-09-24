@@ -1,24 +1,23 @@
 package com.example.sistemaventas.repository
 
-import com.example.sistemaventas.model.Producto
+import Producto
 
-object ProductoRepository {
-    private val productos = mutableListOf<Producto>()
 
-    fun obtenerProductos(): List<Producto> = productos
+object ProductoRepositorio {
+    private val productos = mutableListOf(
+        Producto(id = 1, nombre = "Producto 1", precio = 10.0, cantidad = 5),
+        Producto(id = 2, nombre = "Producto 2", precio = 20.0, cantidad = 3)
+    )
 
     fun agregarProducto(producto: Producto) {
         productos.add(producto)
     }
 
-    fun eliminarProducto(producto: Producto) {
-        productos.remove(producto)
+    fun obtenerProductos(): List<Producto> {
+        return productos
     }
 
-    fun actualizarProducto(producto: Producto) {
-        val index = productos.indexOfFirst { it.id == producto.id }
-        if (index != -1) {
-            productos[index] = producto
-        }
+    fun eliminarProducto(id: Int) {
+        productos.removeAll { it.id == id }
     }
 }
