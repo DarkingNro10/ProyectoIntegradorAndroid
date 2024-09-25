@@ -56,10 +56,9 @@ dependencies {
     // Jetpack Compose UI
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3") // Material 3 para el diseño de interfaz
+    implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.material:material-icons-extended:1.3.1")  // Dependencia para los íconos
-
+    implementation("androidx.compose.material:material-icons-extended:1.3.1")
 
     // Navegación para Jetpack Compose
     implementation("androidx.navigation:navigation-compose:2.5.3")
@@ -67,6 +66,13 @@ dependencies {
     // Otras dependencias necesarias
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.1")
-}
 
+    // Retrofit para realizar solicitudes HTTP
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Coroutine support for Retrofit
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+}
 
